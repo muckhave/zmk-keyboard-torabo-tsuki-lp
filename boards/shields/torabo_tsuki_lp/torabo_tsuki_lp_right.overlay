@@ -43,7 +43,7 @@
 
     scrl_h {
         layers = <10>;
-        input-processors = <&y_suppress 0 1 &x_to_hscrl>;
+        input-processors = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT &y_suppress 0 1 &x_to_hscrl>;
     };
 
 };

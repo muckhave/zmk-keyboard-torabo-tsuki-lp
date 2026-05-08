@@ -6,6 +6,7 @@
     y_to_vscrl: y_to_vscrl {
         compatible = "zmk,input-processor-code-mapper";
         #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
         map = <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
 

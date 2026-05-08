@@ -7,12 +7,6 @@
     combos {
         compatible = "zmk,combos";
 
-        hankaku {
-            bindings = <&kp LANG2>;
-            key-positions = <15 16>;
-            layers = <2>;
-        };
-
         zenkaku {
             bindings = <&kp LANG1>;
             key-positions = <19 20>;
@@ -21,6 +15,11 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <13 14>;
+        };
+
+        hannkaku {
+            bindings = <&kp LANG2>;
+            key-positions = <15 16>;
         };
     };
 

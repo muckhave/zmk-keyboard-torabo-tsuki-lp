@@ -16,7 +16,7 @@
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
     scrl {
-        layers = <2>;
+        layers = <5>;
         input-processors = <&y_to_vscrl>;
     };
 

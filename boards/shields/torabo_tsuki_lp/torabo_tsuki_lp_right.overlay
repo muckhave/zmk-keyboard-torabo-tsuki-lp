@@ -2,14 +2,33 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/ {
+    y_to_vscrl: y_to_vscrl {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        map = <INPUT_REL_Y INPUT_REL_WHEEL>;
+    };
+
+    x_to_hscrl: x_to_hscrl {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        map = <INPUT_REL_X INPUT_REL_HWHEEL>;
+    };
+};
+
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
     scrl {
         layers = <2>;
+        input-processors = <&y_to_vscrl>;
+    };
+
+    hscrl {
+        layers = <4>;
         input-processors = <
-            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            &zip_xy_to_scroll_mapper
+            &zip_xy_transform INPUT_TRANSFORM_X_INVERT
+            &x_to_hscrl
         >;
     };
 };

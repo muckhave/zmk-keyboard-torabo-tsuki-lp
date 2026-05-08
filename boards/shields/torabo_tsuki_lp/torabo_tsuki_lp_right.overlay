@@ -9,11 +9,6 @@
         map = <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
 
-    x_to_hscrl: x_to_hscrl {
-        compatible = "zmk,input-processor-code-mapper";
-        #input-processor-cells = <0>;
-        map = <INPUT_REL_X INPUT_REL_HWHEEL>;
-    };
 };
 
 &pointing_listener {
@@ -24,13 +19,6 @@
         input-processors = <&y_to_vscrl>;
     };
 
-    hscrl {
-        layers = <4>;
-        input-processors = <
-            &zip_xy_transform INPUT_TRANSFORM_X_INVERT
-            &x_to_hscrl
-        >;
-    };
 };
 
 &size_s_transform {

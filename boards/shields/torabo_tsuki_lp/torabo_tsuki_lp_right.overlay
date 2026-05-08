@@ -17,6 +17,20 @@
         codes = <INPUT_REL_X>;
     };
 
+    y_suppress: y_suppress {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_Y>;
+    };
+
+    x_to_hscrl: x_to_hscrl {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        map = <INPUT_REL_X INPUT_REL_HWHEEL>;
+    };
+
 };
 
 &pointing_listener {
@@ -25,6 +39,11 @@
     scrl {
         layers = <5>;
         input-processors = <&x_suppress 0 1 &y_to_vscrl>;
+    };
+
+    scrl_h {
+        layers = <10>;
+        input-processors = <&y_suppress 0 1 &x_to_hscrl>;
     };
 
 };

@@ -24,6 +24,19 @@
     };
 
     behaviors {
+        shift_mb3: shift_mb3 {
+            compatible = "zmk,behavior-macro";
+            label = "SHIFT_MB3";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &mkp MB3>
+                , <&macro_pause_for_release>
+                , <&macro_release &mkp MB3>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
         layer_tap_ori: layer_tap_ori {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_ORI";

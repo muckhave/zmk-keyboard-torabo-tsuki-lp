@@ -70,7 +70,7 @@
         layer_0 {
             bindings = <
 &trans  &trans                     &trans    &trans                   &trans                     &trans                                                                &trans                        &trans                      &trans                    &trans                             &trans                      &trans
-&trans  &kp Q                      &kp L     &kp U                    &kp COMMA                  &kp PERIOD                                                            &layer_tap_ori 4 F            &kp W                       &layer_tap_ori 9 R        &kp Y                              &layer_tap_ori 10 P         &trans
+&trans  &layer_tap_ori 11 Q        &kp L     &kp U                    &kp COMMA                  &kp PERIOD                                                            &layer_tap_ori 4 F            &kp W                       &layer_tap_ori 9 R        &layer_tap_ori 11 Y                &layer_tap_ori 10 P         &trans
 &trans  &layer_tap_ori 5 E         &kp I     &mod_tap_ori LEFT_ALT A  &mod_tap_ori LEFT_SHIFT O  &mod_tap_ori LEFT_CONTROL MINUS  &trans                &trans         &mod_tap_ori RIGHT_CONTROL K  &mod_tap_ori RIGHT_SHIFT T  &mod_tap_ori RIGHT_ALT N  &layer_tap_ori 7 S                 &lt 5 H                     &trans
 &trans  &mod_tap_ori LEFT_SHIFT Z  &kp X     &kp C                    &layer_tap_ori 3 V         &kp SEMICOLON                    &kp SPACE             &kp DELETE     &kp G                         &kp D                       &layer_tap_ori 2 M        &kp J                              &mod_tap_ori RIGHT_SHIFT B  &trans
 &trans  &kp LCTRL                  &kp LGUI  &kp LALT                 &kp BSPC                   &kp SPACE                        &layer_tap_ori 3 TAB  &kp BACKSPACE  &lt 8 ENTER                   &trans                      &trans                    &layer_tap_ori 6 NON_US_BACKSLASH  &mod_tap_ori RCTRL SLASH    &trans
@@ -149,11 +149,11 @@
 
         layer_8 {
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N7        &kp N8        &kp N9        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -174,6 +174,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans           &trans           &trans           &trans           &trans                        &trans      &trans    &trans  &trans  &trans  &trans
+&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                        &trans      &trans    &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &trans  &trans  &shift_mb3  &mkp MB3  &trans  &trans  &trans  &trans
+&trans  &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans        &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans
             >;
         };
     };

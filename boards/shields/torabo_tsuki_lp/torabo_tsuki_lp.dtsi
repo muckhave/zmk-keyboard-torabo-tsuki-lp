@@ -67,6 +67,9 @@
             <&gpio1 14 (GPIO_ACTIVE_HIGH)>
         ;
 
+        debounce-press-ms = <5>;
+        debounce-release-ms = <20>;
+
         wakeup-source;
     };
 

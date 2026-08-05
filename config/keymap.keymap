@@ -21,6 +21,16 @@
             bindings = <&kp LANG2>;
             key-positions = <15 16>;
         };
+
+        leftclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <33 34>;
+        };
+
+        rightclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <34 35>;
+        };
     };
 
     behaviors {
